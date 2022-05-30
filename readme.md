@@ -1,4 +1,4 @@
-# TRIESTE: translation based defense for text classifiers
+# TRIESTE: TRanslatIon basEd defenSe for Text classifiErs
 Codes and implementation files to be used as a reference to the paper: [**TRIESTE: translation based defense for text classifiers.**](https://doi.org/10.1007/s12652-022-03859-0)
 
 ***Status - Published in Springer's Journal of Ambient Intelligence and Humanized Computing*** 
