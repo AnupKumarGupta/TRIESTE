@@ -15,7 +15,7 @@ list1=ds1.perturbed_text
 list2=[]
 a=0
 
-
+## Translation pipeline
 src = 'en'  # source language
 trg = 'de'  # target language
 mname = f'Helsinki-NLP/opus-mt-{src}-{trg}'
@@ -56,9 +56,11 @@ final_score=[]
 
 from transformers import AutoTokenizer, AutoModelForSequenceClassification
 
-tokenizer = AutoTokenizer.from_pretrained("VictorSanh/roberta-base-finetuned-yelp-polarity")
+tok_name = input("Enter Tokenizer name (corr. to the classifier model) from Hugging Face")
+tokenizer = AutoTokenizer.from_pretrained(tok_name)
 
-model = AutoModelForSequenceClassification.from_pretrained("VictorSanh/roberta-base-finetuned-yelp-polarity")
+model_name = input("Enter classifier model name from Hugging Face")
+model = AutoModelForSequenceClassification.from_pretrained("model_name")
 
 a=0
 for y in translated:
@@ -81,4 +83,6 @@ for x in range(len(list1)):
     s+=1
 
 print(f"Percentage of successful attacks is {s/len(list1)*100}")
-df.to_csv("Results_DE_Translation_ROBERTA_BAE_Yelp.csv")
+
+save_file = input("Enter Result file name")
+df.to_csv(save_file)
