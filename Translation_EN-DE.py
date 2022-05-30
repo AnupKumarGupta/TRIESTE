@@ -4,7 +4,7 @@ import numpy as np
 from transformers import MarianTokenizer, MarianMTModel
 from typing import List
 
-print("Enter CSV_FILE_NAME")
+print("Enter attack csv file name")
 path=input()
 
 ds1=pd.read_csv(path)

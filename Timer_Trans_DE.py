@@ -6,11 +6,13 @@ import time
 from transformers import MarianTokenizer, MarianMTModel
 from typing import List
 
-print("Enter CSV_FILE_NAME")
+print("Enter attack csv file name")
 path=input()
 
 ds1=pd.read_csv(path)
 
+
+## Translation pipeline
 src = 'en'  # source language
 trg = 'de'  # target language
 mname = f'Helsinki-NLP/opus-mt-{src}-{trg}'
@@ -32,9 +34,11 @@ def de_en(txtx):
 
 from transformers import AutoTokenizer, AutoModelForSequenceClassification
 
-tokenizer = AutoTokenizer.from_pretrained("textattack/bert-base-uncased-imdb")
+tok_name = input("Enter Tokenizer name (corr. to the classifier model) from Hugging Face")
+tokenizer = AutoTokenizer.from_pretrained(tok_name)
 
-model = AutoModelForSequenceClassification.from_pretrained("textattack/bert-base-uncased-imdb")
+model_name = input("Enter classifier model name from Hugging Face")
+model = AutoModelForSequenceClassification.from_pretrained("model_name")
 
 time_tran=[]
 time_cls=[]
