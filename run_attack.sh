@@ -1,0 +1,2 @@
+#Requires textattack library to be installed
+textattack attack --recipe <attack> --model <model> --dataset-from-huggingface <dataset> --checkpoint-interval <ckpt-interval> --num-examples <num_eg> --num-examples-offset <offset> --shuffle False --log-to-csv "<directory>" --csv-style plain
