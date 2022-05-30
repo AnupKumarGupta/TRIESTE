@@ -4,8 +4,15 @@ Codes and implementation files to be used as a reference to the paper: [**TRIEST
 ***Status - Published in Springer's Journal of Ambient Intelligence and Humanized Computing*** 
 
 ## Overview
-To be updated....
+This repository contains the following files:
 
+> **run_attack.sh** - For generating attack files using [textattack](https://github.com/QData/TextAttack) library.
+> **Translation_EN-DE.py** -  For running proposed defense using EN-DE translation scheme.
+> **Translation_EN-FR.py** -  For running proposed defense using EN-FR translation scheme.
+> **Timer_Trans_DE.py** - For inference time comparision with and without the application of the proposed defense using EN-DE scheme.
+> **Timer_Trans_FR.py** - For inference time comparision with and without the application of the proposed defense using EN-DE scheme.
+
+Further details about the methodology may be directly referred to from the published study.
 
 ## Citation  
 If you intend to use this work, kindly cite us as follows:  
